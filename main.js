@@ -26,6 +26,26 @@ hambugerBtn.addEventListener("click", ()=>{
 //       }
 // });
 
+//slider implementation
+let slides = document.querySelectorAll(".landing-slide");
+let current = 0;
+
+let slider = ()=>{
+      for (let i = 0; i < slides.length; i++){
+            slides[i].style.display = "none";
+      }
+
+      current++;
+      if (current > slides.length){
+            current = 1;
+      }
+
+      slides[current - 1].style.display = "grid";
+      setTimeout(slider, 5000);
+}
+slider();
+
+
 let featureLinks = document.querySelectorAll(".feature-links ul li");
 let feature_Containers = document.querySelectorAll(".feature-wrapper");
 
