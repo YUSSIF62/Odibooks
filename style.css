@@ -472,13 +472,30 @@ header .submenu ul li a{
       .landing-texts p{
             margin:auto;
       }
-      .landing-texts,
-      .landing-text h4{
+      .landing-button,
+      .landing-texts h1,
+      .landing-texts h4{
             padding-left:0;
             margin-left:0;
       }
 }
-
+@media(max-width:480px){
+      .landing-button,
+      .landing-texts h1,
+      .landing-texts h4{
+            padding:0 10px;
+      }
+      .landing-texts h1{
+            font-size:30px;
+      }
+      .landing-texts h4{
+            font-size:20px;
+      }
+      .landing-button a{
+            font-size:16px;
+            padding:10px 20px;
+      }
+}
 
 
 
@@ -732,7 +749,19 @@ header .submenu ul li a{
             width:150px;
             height:150px;
       }
+      .solid-background{
+            padding:50px 0;
+      }
+      .solid-background .inner-container{
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+            padding:100px 50px;
 }
+}
+
 @media(max-width:320px){
       .item-container{
             width:150px;
