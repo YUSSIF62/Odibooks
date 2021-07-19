@@ -16,15 +16,30 @@ hambugerBtn.addEventListener("click", ()=>{
       mobileNav.classList.toggle('show');
 });
 
-//let header = document.querySelector('header');
+//modal implementation
+let modalBody = document.querySelector(".modal-body");
+let modalBtn = document.querySelector(".get-started");
+let modalContainer = document.querySelector(".modal-content-container");
+let closeBtn = document.querySelector(".close-btn");
 
-// window.addEventListener("scroll",()=>{
-//       if(window.scrollY > 50){
-//             header.classList.add("header-on-scroll");
-//       }else{
-//             header.classList.remove("header-on-scroll");
-//       }
-// });
+modalBtn.addEventListener("click", (e)=>{
+  e.preventDefault();
+   modalContainer.classList.add("zoomIn");
+   modalBody.style.display = "block";
+});
+closeBtn.addEventListener("click",(e)=>{
+      e.preventDefault();
+      if(modalContainer.classList.contains("zoomIn")){
+            modalContainer.classList.remove('zoomIn');
+            modalContainer.classList.add("zoomOut");
+      }
+      let delay = setTimeout(()=>{
+            modalBody.style.display = "none";
+            if(modalContainer.classList.contains("zoomOut")){
+                  modalContainer.classList.remove("zoomOut");
+            }
+      }, 500);
+});
 
 //slider implementation
 let slides = document.querySelectorAll(".landing-slide");
@@ -44,6 +59,9 @@ let slider = ()=>{
       setTimeout(slider, 5000);
 }
 slider();
+
+
+
 
 
 let featureLinks = document.querySelectorAll(".feature-links ul li");
