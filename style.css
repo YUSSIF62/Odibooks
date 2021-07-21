@@ -1651,6 +1651,7 @@ footer{
       }
 }
 @media(max-width:480px){
+     
       .form-content-flex{
             display:block;
             text-align: center;
@@ -1659,9 +1660,12 @@ footer{
             margin:10px auto;
       }
 }
-@media(max-width:360px){
+@media(max-width:411px){
       .form-content-row{
             grid-template-columns: repeat(1,1fr);
             grid-gap: 20px;
+      }
+      .background-container{
+            height:250vh;
       }
 }
