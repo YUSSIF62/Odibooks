@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Odibooks</title>
+
+      
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="style.css"></head>
+<body>
+      <div class="background-container">
+            <div class="background-image-slide one"></div>
+            <div class="background-image-slide two"></div>
+            <div class="background-image-slide three"></div>
+            <div class="background-image-slide four"></div>
+            <div class="background-image-slide five"></div>
+
+            <div class="sign-up-container">
+                  <div class="sign-up-content">
+                        <div class="logo-section">
+                              <h1><span class="blue">Odi</span><span class="black">bo</span><span class='red'>ok</span><span class="green">s</span><span class="blue small">.com</span></h1>
+                        </div>
+                        <div class="intro-text">
+                              <h5>Start your free 30 day trial</h5>
+                              <p>Get your own Odibooks account in seconds</p>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="form-container">
+                              <form action="" method="post">
+                                    <div class="form-content-row">
+                                          <div class="form-column">
+                                                <label for="firstname">Firstname</label>
+                                                <input type="text" name="" class="form-control" placeholder="First name">
+                                          </div>
+                                          <div class="form-column">
+                                                <label for="lasstname">Lastname</label>
+                                                <input type="text" name="" class="form-control" placeholder="Last name">
+                                          </div>
+                                    </div>
+                                    <div class="form-content-row">
+                                          <div class="form-column">
+                                                <label for="email address">Email Address</label>
+                                                <input type="email" name="" class="form-control" placeholder="you@company.com">
+                                          </div>
+                                          <div class="form-column">
+                                                <label for="email">Password</label>
+                                                <input type="password" name="" class="form-control" placeholder="Password">
+                                          </div>
+                                    </div>
+                                    <div class="form-content-row">
+                                          <div class="form-column">
+                                                <label for="company name">Company Name</label>
+                                                <input type="text" name="" class="form-control" placeholder="Company name">
+                                          </div>
+                                          <div class="form-column">
+                                                <label for="telephone">Telephone</label>
+                                                <input type="tel" id="tel" name="" class="form-control" placeholder="712345678">
+                                          </div>
+                                    </div>
+                                    <div class="form-content-row">
+                                          <div class="form-column">
+                                                <label for="Country">Country</label>
+                                                <select name="country" class="form-control">
+                                                      <option value="">Country</option>
+                                                      <option value="kenya">Kenya</option>
+                                                      <option value="uganda">Uganda</option>
+                                                      <option value="tanzania">Tanzania</option>
+                                                      <option value="rwanda">Rwanda</option>
+                                                      <option value="ethiopia">Ethiopia</option>
+                                                      <option value="south africa">South Africa</option>
+                                                      <option value="nigeria">Nigeria</option>
+                                                      <option value="egypt">Egypt</option>
+                                                      <option value="ghana">Ghana</option>
+                                                      <option value="burundi">Burundi</option>
+                                                </select>
+                                          </div>
+                                          <div class="form-column">
+                                                <label for="subdomain">Subdomain</label>
+                                                <input type="text" id="constVal" class="form-control" placeholder="Last name" value=".odibooks.com">
+                                          </div>
+                                    </div>
+                                    <div class="form-content-flex">
+                                          <p>By clicking 'Create Account' you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy.</a></p>
+                                          <button>Create Account</button>
+                                    </div>
+                              </form>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="external-link">
+                              <p>Already have an account? <a href="">Sign in</a></p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+
+
+      <!--Scripts-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js" integrity="sha512-QMUqEPmhXq1f3DnAVdXvu40C8nbTgxvBGvNruP6RFacy3zWKbNTmx7rdQVVM2gkd2auCWhlPYtcW2tHwzso4SA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+         let telephone = document.querySelector("#tel");
+         let initTel = window.intlTelInput(telephone, {
+              utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+              initialCountry: 'ke',
+              nationalMode: true
+         });
+          
+        
+
+         let background_slides = document.querySelectorAll(".background-image-slide");
+         let current_slide = 0;
+
+         let background_slider = ()=>{
+               for (let i = 0; i < background_slides.length; i++)
+               {
+                     background_slides[i].style.display = "none";
+               }
+
+                current_slide++;
+
+                if (current_slide > background_slides.length){
+                    current_slide = 1;
+                }
+                background_slides[current_slide -1].style.display = "block";
+             
+                setTimeout(background_slider, 5000);            
+         };
+         background_slider();
+     </script>
+</body>
+</html>
