@@ -1572,6 +1572,9 @@ footer{
         width:100%;
         margin-top:20px;
   }
+  .form-content-row.span-wide{
+        display:block;
+  }
   .form-column .form-control{
         width:100%;
         height: 40px;
@@ -1598,6 +1601,9 @@ footer{
 }
 .form-column select option{
       color:#444;
+}
+.form-column select option[disabled]{
+      color:rgb(212, 212, 212);
 }
 .iti-flag{
       background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/img/flags.png");
