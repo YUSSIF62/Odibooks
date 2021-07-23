@@ -40,7 +40,19 @@ closeBtn.addEventListener("click",(e)=>{
             }
       }, 500);
 });
-
+//slick slider for features
+$(document).ready(function(){
+      $('.features2-container').slick({
+        arrows:false,
+        autoplay:true,
+        slidesToShow:1,
+        slidesToScrol:1,
+        autoplaySpeed:5000,
+        pauseOnHover:false,
+       
+      });
+    });
+                
 //slider implementation
 let slides = document.querySelectorAll(".landing-slide");
 let current = 0;
@@ -64,38 +76,38 @@ slider();
 
 
 
-let featureLinks = document.querySelectorAll(".feature-links ul li");
-let feature_Containers = document.querySelectorAll(".feature-wrapper");
+// let featureLinks = document.querySelectorAll(".feature-links ul li");
+// let feature_Containers = document.querySelectorAll(".feature-wrapper");
 
-function showActive(index){
-      featureLinks.forEach((btn)=>{
-            btn.classList.remove("active");
-      });
-      featureLinks[index].classList.add("active");
+// function showActive(index){
+//       featureLinks.forEach((btn)=>{
+//             btn.classList.remove("active");
+//       });
+//       featureLinks[index].classList.add("active");
 
-      feature_Containers.forEach((tab)=>{
-            tab.style.display = "none";
-      });
-      feature_Containers[index].style.display = "grid";
+//       feature_Containers.forEach((tab)=>{
+//             tab.style.display = "none";
+//       });
+//       feature_Containers[index].style.display = "grid";
 
-      window.onresize = ()=>{
-            let windowWidth = window.innerWidth;
-            if(windowWidth <= 1080){
-                  feature_Containers.forEach((tab)=>{
-                        tab.style.display = "block";
-                  });
-            }else{
-                  showActive(0);
-            }
-      }
+//       window.onresize = ()=>{
+//             let windowWidth = window.innerWidth;
+//             if(windowWidth <= 1080){
+//                   feature_Containers.forEach((tab)=>{
+//                         tab.style.display = "block";
+//                   });
+//             }else{
+//                   showActive(0);
+//             }
+//       }
 
-}
-showActive(0);
-for(let i = 0; i < featureLinks.length; i++){
-      featureLinks[i].addEventListener("click",()=>{
-            showActive(i);
-      })
-}
+// }
+// showActive(0);
+// for(let i = 0; i < featureLinks.length; i++){
+//       featureLinks[i].addEventListener("click",()=>{
+//             showActive(i);
+//       })
+// }
 
 let accordions = document.querySelectorAll(".question");
 accordions.forEach((touch)=>{
