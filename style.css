@@ -299,12 +299,6 @@ header .submenu ul li a{
             -moz-transform: scaleY(0);
             -ms-transform: scaleY(0);
             -o-transform: scaleY(0);
-            transition: all 0.5s ease-out;
-            -webkit-transition: all 0.5s ease-out;
-            -moz-transition: all 0.5s ease-out;
-            -ms-transition: all 0.5s ease-out;
-            -o-transition: all 0.5s ease-out;
-            opacity:0;
             
 }
      header nav.show{
@@ -892,15 +886,22 @@ header .submenu ul li a{
       .accounting-wrapper{
             grid-template-columns: repeat(1,1fr);
       }
-      .spec-column.second{
-            padding-top: 50px;
+      .accounting-wrapper .solid-background{
+            order:1;
       }
-      .spec-column{
-            padding-top:50px;
+      .accounting-wrapper .specifics{
+            order:2;
+      }
+      .accounting-wrapper 
+      .spec-column.second{
+            padding-top: 20px;
+      }
+      .specifics{
+            padding-top:0px;
       }
       .solid-background{
             border-radius: 0;
-            width:70%;
+            width:80%;
             margin:auto;
             -webkit-border-radius: 0;
             -moz-border-radius: 0;
@@ -918,14 +919,23 @@ header .submenu ul li a{
 @media(max-width:480px){
       .specifics-inner{
             grid-template-columns: repeat(1,1fr);
-            grid-gap:10px;
+            grid-gap:0px;
+            width:100%;
       }
       .spec-column.second, .spec-column.three{
             padding-top: 0;
       }
+      .spec-column.second{
+            padding-top:0 !important;
+           
+      }
+      .spec-column{
+            width:100%;
+      }
       .item-container{
-            width:150px;
+            width:90% !important;
             height:150px;
+            margin:0px auto 20px auto;
       }
       .solid-background{
             padding:50px 0;
@@ -940,18 +950,6 @@ header .submenu ul li a{
 }
 }
 
-@media(max-width:320px){
-      .item-container{
-            width:150px;
-            height:150px;
-      }
-      .item-container .icon span{
-            font-size:20px;
-      }
-      .item-container p{
-            font-size: 12px;
-      }
-}
 
 #hr-section{
       padding:60px 0;
