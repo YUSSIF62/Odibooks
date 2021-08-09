@@ -366,7 +366,7 @@ header .submenu ul li a{
 
 .landing{
       width:100%;
-      height:87vh;
+      height:70vh;
       background:rgb(0, 144, 228);
       margin-top:80px;
 }
@@ -382,6 +382,7 @@ header .submenu ul li a{
 }
 .landing-slide .image-side{
       width:750px;
+      height:inherit;
       border-radius: 0px 250px 0px 0px;
       -webkit-border-radius: 0px 250px 0px 0px;
       -moz-border-radius: 0px 250px 0px 0px;
@@ -404,15 +405,17 @@ header .submenu ul li a{
       align-items: center;
 }
 .landing-texts h1{
-      font-size: 45px;
+      font-size: 40px;
       padding-left:40px;
       font-family: "Open Sans";
       color:whitesmoke;
       margin:30px 0;
+      font-weight: bold;
 }
 .landing-texts p{
-      margin-left:40px;
+      margin-left:30px;
       background: rgb(247, 38, 38);
+      font-weight: 600;
       width:200px;
       text-transform: uppercase;
       padding:5px;
@@ -427,7 +430,7 @@ header .submenu ul li a{
       -o-border-radius:10px;
 }
 .landing-texts h4{
-      font-size:30px;
+      font-size:24px;
       color:white;
       margin-left:40px;
       margin-bottom: 40px;
@@ -437,11 +440,10 @@ header .submenu ul li a{
       display:block;
 }
 .landing-button a{
-      font-size:24px;
+      font-size:20px;
       color: white;
       background-color: rgb(247, 38, 38);
       padding:10px 30px;
-      border:2px solid white;
       border-radius: 10px;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
@@ -1065,7 +1067,7 @@ header .submenu ul li a{
       background-size: cover;
 }
 .inventory-column:nth-child(3){
-      background:url("images/foodbg.jpg") no-repeat;
+      background:url("images/inventory.jpg") no-repeat;
       background-size: cover;
       grid-column: 3/5;
 }
@@ -1075,7 +1077,7 @@ header .submenu ul li a{
       grid-column: 1/3;
 }
 .inventory-column:nth-child(5){
-      background:url("images/healthbg.jpg") no-repeat;
+      background:url("images/uom.jpg") no-repeat;
       background-size: cover;
 }
 .inventory-column:nth-child(6){
@@ -1256,6 +1258,9 @@ header .submenu ul li a{
       -ms-transform:rotate(0);
       -o-transform:rotate(0);
 }
+.payroll-specs{
+      padding:20px 0;
+}
 }
 @media(max-width:480px){
       .payroll-pattern{
@@ -1263,7 +1268,7 @@ header .submenu ul li a{
             width:100%;
       }
       .item-pattern{
-            width:80%;
+            width:100%;
             margin:auto;
       }
 }
@@ -1492,8 +1497,17 @@ footer{
         height: 1px;
         background-color:rgba(187, 187, 187, 0.438);
   }
-
-
+  .embed{
+      width:50px;
+      height: 50px;
+      position:fixed;
+      bottom:20px;
+      left:20px;
+}
+.embed img{
+      width:100%;
+      height:100%;
+}
 
   /* Sign up Styling */
   .background-container{
